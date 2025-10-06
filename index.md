@@ -19,13 +19,13 @@
 
 ## Índice de ejercicios
 
-**Bloque A – Sentencias condicionales (if, if-else, if anidado)** → Ej. 1–5
-**Bloque B – Sentencia switch** → Ej. 6–8
-**Bloque C – Aplicaciones numéricas. Formateo de texto en label** → Ej. 9-12
-**Bloque D – Método de conversión TryParse** → Ej. 13–15
-**Bloque E – Sentencias de repetición** → Ej. 16–30
-**Bloque F – Sentencias de salto** → Ej. 31- 33
-**Bloque G – Extra / ampliación** → Ej. 34-35
+**Bloque A – Sentencias condicionales (if, if-else, if anidado)** → Ej. 1–5  
+**Bloque B – Sentencia switch** → Ej. 6–8  
+**Bloque C – Aplicaciones numéricas. Formateo de texto en label** → Ej. 9-12  
+**Bloque D – Método de conversión TryParse** → Ej. 13–15  
+**Bloque E – Sentencias de repetición** → Ej. 16–30  
+**Bloque F – Sentencias de salto** → Ej. 31- 33  
+**Bloque G – Extra / ampliación** → Ej. 34-35  
 
 
 <br>
@@ -66,7 +66,7 @@ Realiza un programa que lea una **nota numérica con decimales** introducida por
 4. 	**Bien:** nota entre 6 (inclusive) y 7 (exclusiva)
 5. 	**Notable:** nota entre 7 (inclusive) y 9 (exclusiva)
 6. 	**Sobresaliente:** nota igual o superior a 9
-7. 
+   
 Por ejemplo, si el usuario introduce la nota 7,25, el programa debe mostrar: "Notable".
 
 Si el usuario introduce una nota incorrecta el programa mostrará un mensaje de error.
@@ -101,7 +101,7 @@ Las instrucciones válidas son:
 - "sacar la basura"
 - "regar las plantas"
 - "hacer la cama"
-- 
+  
 El programa debe:
 
 - Usar `switch` para mostrar un mensaje según la tarea. Por ejemplo: “Lavando los platos…”
@@ -121,18 +121,15 @@ Imagina que estás desarrollando una aplicación para una tienda online. El usua
 
 El programa mostrará inicialmente un mensaje con las categorías anteriores.
 
-La aplicación una vez leída la categoría elegida mostrará para los tres primeros casos los siguientes mensajes: 
-
+La aplicación una vez leída la categoría elegida mostrará para los tres primeros casos los siguientes mensajes:  
 **Has seleccionado una categoría de productos electrónicos.
 Promoción: Financiación disponible hasta en 12 meses sin intereses.**
 
-Y en los tres siguientes:
-
+Y en los tres siguientes:  
 **Has seleccionado una categoría de productos de moda.
 Promoción: 3x2 en artículos seleccionados.**
 
-Y en caso de introducir otra categoría diferente el programa indicará el siguiente mensaje de error:
-
+Y en caso de introducir otra categoría diferente el programa indicará el siguiente mensaje de error:  
 **Categoría no reconocida. Por favor, selecciona una opción válida del menú.**
 
 <br>
@@ -143,7 +140,7 @@ Y en caso de introducir otra categoría diferente el programa indicará el sigui
 
 Realizar un programa en el que se pueda ir introduciendo texto. Este texto se irá añadiendo cada vez que pulsemos el botón se añadirá el texto al Label. 
 
-`Ayuda: “\n” para introducir fin de línea.`
+`Ayuda: **"\n"** para introducir fin de línea.`
 
 ![Ejer09](./images/ejer09.png)
 
@@ -168,7 +165,7 @@ Realizar un programa en el que el usuario introduzca una cantidad en euros (con 
 
 Realizar un programa en el que introduzcamos una hora con minutos y segundos. 
 
-Tras validar los datos (que sea una hora correcta) nos escribirá la hora de un segundo después. 
+Tras validar los datos (que sea una hora correcta) nos escribirá **la hora de un segundo después**. 
 
 Validar la hora significa que la hora esté entre 0 y 23, los minutos entre 0 y 59 y los segundos entre 0 y 59, en otro caso nos dará un mensaje de error.
 
@@ -226,7 +223,7 @@ static void Main(string[] args)
 
 ## Ejercicio 14: Uso de foreach – enum (Consola)
 
-Crea un programa que defina un `enum` llamado `TipoVehiculo` con los valores: Coche, Moto, Bicicleta, Autobús y Camión. 
+Crea un programa que defina un `enum` llamado `TipoVehiculo` con los valores: `Coche`, `Moto`, `Bicicleta`, `Autobús` y `Camión`. 
 
 El programa debe mostrar por pantalla la lista de todos los tipos de coche, uno por línea, utilizando un bucle foreach para recorrer el enumerado.
 
@@ -266,7 +263,9 @@ En algunos de los ejercicios que vienen a continuación vamos a utilizar `InputB
 
 Para usarla en C#, necesitas importar el espacio de nombres:
 
+```csharp
 using Microsoft.VisualBasic;
+```
 
 Y crearemos el proyecto de tipo: **Aplicación de Windows Forms**
 
@@ -381,7 +380,9 @@ Realizar un programa que calcule el producto de dos números usando sumas. Hay q
 
 Realizar un programa que calcule el valor de la suma de la siguiente serie para un numero n leído por teclado y mayor que 0. **(Consola)**
 
-		**Serie: 1 - 1/2 + 1/3 - 1/4........(+ -) 1/n**
+**Serie: 1 - 1/2 + 1/3 - 1/4........(+ -) 1/n**
+
+<br>
 
 # Bloque F – Sentencias de salto
 
@@ -390,7 +391,7 @@ Realizar un programa que calcule el valor de la suma de la siguiente serie para 
 Realizar un programa en Windows Forms con un único botón que permita al usuario acceder al sistema mediante la introducción de sus credenciales.
 
 Requisitos:
-- La interfaz tendrá **un solo botón** con el texto: **“Acceder al sistema”.**
+- La interfaz tendrá **un solo botón** con el texto: **"Acceder al sistema"**.
   
 - Al hacer clic en el botón, se debe solicitar al usuario **su nombre de usuario** y **contraseña** mediante `InputBox`.
   
@@ -458,6 +459,7 @@ En caso contrario mostrará el mensaje **"Producto aprobado"** y continuará la 
 
 ![Ejercicio 33b](./images/ejer33b.png)
 
+<br>
 
 # Bloque G – Extra / Ampliación
 
