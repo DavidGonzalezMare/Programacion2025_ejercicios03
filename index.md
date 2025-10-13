@@ -152,14 +152,26 @@ Por ejemplo: 27.375 le corresponde 2 de 10.000, 1 de 5.000, 1 de 2.000, 3 de 100
 
 Hacerlo de forma que si corresponde 0 billetes no aparezca. 
 
-![Ejer10](./images/ejer10.png)
+![Ejer10](./images/ejer10a.png)
 
 
 ## Ejercicio 11: Calcular billetes y monedas (dinero en euros con decimales)
 
 Realizar un programa en el que el usuario introduzca una cantidad en euros (con decimales) y obtengamos los billetes y monedas de euro correspondientes, así como las monedas de céntimos correspondientes. 
 
-![Ejer11](./images/ejer11.png)
+
+![Ejer11](./images/ejer11a.png)
+
+Tip: para obtener a partir de un valor decimal (768.89) los euros en una variable entera y los céntimos en otra lo podéis hacer así:
+
+```csharp
+  decimal cantidad = decimal.Parse(txtCantidad.Text);
+
+  // Si tenemos 237.85 obtenemos 237 en euros y 85 en centimos
+  int euros = (int)Math.Floor(cantidad);
+  int centimos = (int)(cantidad * 100 - euros * 100);
+```
+
 
 ## Ejercicio 12: Un Segundo Más: Validación y Actualización de Hora
 
