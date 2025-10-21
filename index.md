@@ -251,13 +251,60 @@ A partir del código del programa anterior, añadimos lo siguiente:
   
 - Si el valor introducido está definido en el enumerado se mostrará mensaje indicando que el vehículo seleccionado es válido. Si no, se indicará que no es válido.
 
-Uso de método `isDefined` el cual devuelve un booleano indicando si está definido o no. En caso de no ser válido se indicará mensaje de error. Sintaxis:
-
-`Enum.IsDefined(typeof(TipoVehiculo), vehiculoSeleccionado)`
-
 ![Ejer15a](./images/ejer15a.png) ![Ejer15b](./images/ejer15b.png)
 
 ![Ejer15c](./images/ejer15c.png)
+
+## Ejercicio 15b: (Resuelto) TryParse, Enum, método IsDefined
+
+A partir del código del programa anterior, modifícalo para que el usuario introduzca su tipo de vehículo mediante un número (según el orden en el enumerado) en lugar de por nombre.
+
+Si el valor introducido está definido en el enumerado se mostrará mensaje indicando que el vehículo seleccionado es válido. Para ello, utilizaremos el método `Enum.IsDefined`, que devuelve un valor booleano indicando si el número corresponde a un valor definido en el enumerado. En caso de no ser válido se indicará mensaje de error.  
+
+Sintaxis: `Enum.IsDefined(typeof(TipoVehiculo), valor)`
+
+```csharp
+enum TipoVehiculo
+{
+  Coche =1, Moto=2, Bicicleta=3, Autobús=4, Camión=5
+}
+ 
+static void Main(string[] args)
+{
+    Console.WriteLine("Tipos de vehículo disponibles:");
+    foreach (TipoVehiculo tipo in Enum.GetValues(typeof(TipoVehiculo)))
+    {
+        Console.WriteLine($"{(int)tipo}. {tipo}");
+    }
+
+    Console.Write("\nIntroduce el tipo de vehículo: (1-5) ");
+    string entrada = Console.ReadLine();
+
+    // Intentamos convertir la entrada del usuario al enum TipoVehiculo
+    if (int.TryParse(entrada, out int valor))
+    {
+        // Comprobamos si el valor introducido está definido en el enum
+        if (Enum.IsDefined(typeof(TipoVehiculo), valor))
+        {
+            Console.WriteLine($"El tipo de vehículo '{(TipoVehiculo)valor}' es válido.");
+        }
+        else
+        {
+            Console.WriteLine("Error: número fuera del rango del enumerado");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Entrada incorrecta: se ha de introducir un número");
+    } 
+}
+```
+
+Conclusiones:
+
+- `TryParse` es ideal cuando el usuario introduce nombres de los valores del **enumerado**.
+  
+- `IsDefined` es útil cuando se trabaja con **valores numéricos** y se quiere verificar si están definidos en el **enumerado**.
 
 <br>
 
